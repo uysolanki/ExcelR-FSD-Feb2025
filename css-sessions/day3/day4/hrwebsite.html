@@ -81,11 +81,33 @@
         cursor: pointer;
       }
 
+      /* input[type='text'] {
+        background-color: #395c60;
+        color: white;
+        border: none;
+        cursor: pointer;
+      } */
+
+      .one h1,p{
+        background-color: yellow;
+      }
+
+      .one>h1{
+        background-color: green;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Welcome to Company HR Portal</h1>
+      <div class="one">
+                <h1>Heading Element 1</h1>
+                <div>
+                     <h1>Heading Element 2</h1>
+                    <p>Paragraph Element 1</p>
+                    <p>Paragraph Element 2</p>
+                </div>
+      </div>
       <nav>
         <ul>
           <a href="#employee-registration"> <li>Employee Registration</li></a>
