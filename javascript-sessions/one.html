@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let number1=10;
+        // let number2=20;
+        // let number3=number1+number2;
+        // console.log(number3)
+
+
+        // let  a=10;
+        // var b=20;
+        // const c=30;
+
+        // if(number3>20)
+        // {
+        // console.log('Number is big')
+        // }
+        // else
+        // {
+        // console.log('Number is small')
+        // }
+
+        //var   global scope or a function scope
+
+        var n1=100
+        var n1=99      //redecalre can work for var
+
+        n1=199         //reinitialise is permissable for var
+
+
+        var x         //only declare without being initialised for var
+        function addition()
+        {
+            var a=100;
+            if(a>50)
+            {
+               var b=200;
+               var b=150;
+               let k;            //only declare without being initialised for let 
+            //    let c=500
+            //    let c=500      //re-declare is not permissable for let
+
+               let d=100
+               d=d+500           //re-initialize , permisable for let
+               d--
+               d++
+               console.log(a)
+               console.log(b)
+
+
+               const c=100;
+               c=99;
+
+               const g=9;
+            } 
+            console.log(k)
+        }
+
+        addition()
+    </script>
+</body>
+</html>
