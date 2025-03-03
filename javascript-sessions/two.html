@@ -95,20 +95,49 @@
             // console.log(sum)
 
 
-            const size=Number(prompt('Enter Array Size'))
-            let arr=[]
-            for(let i=0;i<size;i++)
+            // const size=Number(prompt('Enter Array Size'))
+            // let arr=[]
+            // for(let i=0;i<size;i++)
+            // {
+            //     arr.push(Number(prompt('Enter a number')))
+            // }
+
+            // let sum=0
+            // for(let n of arr)
+            // {
+            //     if(n%2==1)
+            //     sum=sum+n;
+            // }
+            //console.log('sum of odd elements',sum);
+
+
+            // function addition()
+            // {
+            //     console.log(arguments.length)
+            //     let sum=0;
+            //     for(let i=0;i<arguments.length;i++)
+            //         {
+            //         sum=sum+arguments[i]
+            //         }
+            //     console.log(sum);
+            // }
+
+            // addition(10,50,90,100)
+
+
+            function addition()
             {
-                arr.push(Number(prompt('Enter a number')))
+                console.log(arguments.length)
+                let sum=0;
+                for(let i=0;i<arguments.length;i++)
+                    {
+                    sum=sum+arguments[i]
+                    }
+               return sum;
             }
 
-            let sum=0
-            for(let n of arr)
-            {
-                if(n%2==1)
-                sum=sum+n;
-            }
-            console.log('sum of odd elements',sum)
+            const result=addition(10,50,90,100);
+            console.log(`The result is ${result}`);
 
 
     </script>
