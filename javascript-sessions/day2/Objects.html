@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        player={
+            pno:18,
+            pname:'Virat',
+            mp:100,
+            rs:5000,
+            no:20,
+            'mother-name':'Saroj',
+            mother:100
+        }
+
+        console.log(player.pno)
+        player.awards=50;
+        console.log(player)
+
+        delete player.no
+
+        console.log(player)
+
+        console.log(player['pno'])
+
+        console.log(player.pno)
+
+        console.log(player['pname'])
+        console.log(player['mp'])
+        console.log(player['rs'])
+
+        console.log(player['mother-name'])
+        let name=95;
+        console.log(player.mother-name)
+
+        product={
+            pno:1,
+            title: 'Cotton T-Shirt',
+            price:100,
+            quantity:50,
+            category:'Mens',
+            rating:{
+                count:500,
+                stars:3.7
+            }
+        }
+
+        console.log(product.title)
+        console.log(product.rating.count)
+
+    </script>
+</body>
+</html>
