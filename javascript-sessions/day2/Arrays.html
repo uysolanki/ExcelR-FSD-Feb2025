@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <Script>
+
+        const cars=["Audi","BMW","Mercedes","Mahindra"]
+        console.log(cars)
+
+        console.log(cars.length)
+
+
+        cars.push("Tesla")      //Add at the end
+        console.log(cars)
+
+        cars.unshift("Honda")  //Add at the begining
+        console.log(cars)
+
+        cars.pop()            //remove last
+        console.log(cars)
+
+        cars.shift()          //remove first
+        console.log(cars)
+
+        console.log(cars.at(1)); 
+        console.log(cars[1]); 
+
+        for(let i=0;i<cars.length;i++) //traditional for loop
+        {
+            console.log(cars.at(i))
+        }
+
+        for(let car of cars)  //for of loop
+        {
+            console.log('I drive ',car);
+        }
+
+        for(let car of cars)  //for of loop
+        {
+            if(car.length>=6)
+            console.log('I own ',car);
+        }
+
+        if(cars.includes("Tata"))
+        console.log("Car Found")
+        else
+        console.log("Car Not Found")
+                      
+        const numbers=[18,11,15,21]
+        console.log(numbers.every((number)=>(number>10)))
+
+        console.log(numbers.some((number)=>(number>20)))
+
+        // cars.fill("Vehicle")
+        // console.log(cars)
+
+        let arr1=[10,20,30]
+        let arr2=[40,50,60]
+        arr1=arr1.concat(arr2)
+        console.log(arr1)
+
+        cars.reverse()
+        console.log(cars)
+
+        cars.sort()
+        console.log(cars)
+
+        //['Mahindra', 'Mercedes', 'BMW', 'Audi']
+        //"'Mahindra,Mercedes,BMW,Audi"
+        //"'Mahindra$Mercedes$BMW$Audi"
+
+       const carString= cars.join("")
+       console.log(carString)
+
+       const arr2d=[10,20,[30,40,50]]
+       console.log(typeof arr2d[2])
+
+       const arr1d=arr2d.flat();
+       console.log(arr1d)
+
+       const cartoString= cars.toString()
+       console.log(cartoString)
+                    //0  1  2  3  4  5  6
+       const testArr=[10,20,30,40,50,60,70]
+       const slicedArray=testArr.slice(2,5)
+       console.log(slicedArray)
+
+       console.log(testArr)
+
+       const ogArr=[10,20,30,40,50,60,70]
+       let splicedArray=ogArr.splice(2,2)
+       console.log(splicedArray)
+       console.log(ogArr)
+
+
+        
+    </Script>
+</body>
+</html>
