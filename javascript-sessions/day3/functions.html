@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    
+  </head>
+  <body>
     <script>
-            function addition()
-            {
-                let n1=100;
-                let n2=200;
-                let result=n1+n2;
-                console.log(result)
-            }
+      function addition() {
+        let n1 = 100;
+        let n2 = 200;
+        let result = n1 + n2;
+        console.log(result);
+      }
 
-            //addition();
+      //addition();
+
+      function addition1(a, b) {
+        let result = a + b;
+        console.log(result);
+      }
+
+      //addition1(101,201);
+
+      function addition2(a, b = 1000) {
+        let result = a + b;
+        console.log(result);
+      }
+
+      //addition2(101);
+
+      function addition3(a, b = 1000) {
+        let result = a + b;
+        return result;
+      }
+
+      var ans = addition3(10, 15);
+      console.log(ans);
+
+      const addition4 = () => {
+        let n1 = 100;
+        let n2 = 200;
+        let result = n1 + n2;
+        console.log(result);
+      };
+
+      //setTimeout
+      //setInterval
+
+    //   setTimeout(test, 5000);
+
+    //   function test() {
+    //     console.log("hi");
+    //   }
+
+    //   setInterval(test, 2000);
+
+    //   function test() {
+    //     console.log("bye");
+    //   }
 
 
-            function addition1(a,b)
-            {
-                let result=a+b;
-                console.log(result)
-            }
-
-            //addition1(101,201);
-
-
-            function addition2(a,b=1000)
-            {
-                let result=a+b;
-                console.log(result)
-            }
-
-            //addition2(101);
-
-            function addition3(a,b=1000)
-            {
-                let result=a+b;
-                return result
-            }
-
-            var ans=addition3(10,15)
-            console.log(ans)
-
-          const addition4= ()=>{
-            let n1=100;
-                let n2=200;
-                let result=n1+n2;
-                console.log(result)
-           }
-
-           addition4()
-
+      setInterval(()=>{console.log("ExcelR")},3000)
     </script>
-</body>
+  </body>
 </html>

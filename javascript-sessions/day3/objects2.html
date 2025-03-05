@@ -35,14 +35,37 @@
         // console.log(newProduct)
 
         //Spread Operator
-        product={
-            pno:1,
-            title: 'Cotton T-Shirt',
-            price:100
+        // product={
+        //     pno:1,
+        //     title: 'Cotton T-Shirt',
+        //     price:100
+        // }
+
+        // const product1={...product,quantity:500}
+        // console.log(product1)
+
+
+        player={
+            pno:18,
+            pname: 'Virat',
+            mp:100,
+            rs:5000,
+            avg:function calculateAverage()
+                {
+                    const average=this.rs/this.mp
+                    console.log(average)
+                },
+            displayParent: ()=>
+                            {
+                                console.log('Mother Name : Saroj');
+                                console.log('Father Name : Premnath');
+                                const average=this.rs/this.mp
+                                console.log(average)
+                            }
         }
 
-        const product1={...product,quantity:500}
-        console.log(product1)
+        player.avg()
+        player.displayParent();
 
     </script>
 </body>
