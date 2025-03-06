@@ -143,6 +143,46 @@
 
            const ac=[...new Set(products.map(product=>product.category)),'All']
            console.log(ac)
+
+
+           //Filter
+           let numbers1=[8,3,9,8,9];
+           const evenArray=numbers1.filter(
+                (num)=>{
+                    return num%2==1
+                }
+            )
+            console.log(evenArray)
+
+
+            //Filter
+           let numbers2=[8,3,9,8,9];
+           const element=numbers1.find(
+                (num)=>{
+                    return num%2==0
+                }
+            )
+            console.log('First Even Number in the Array is ', element)
+
+
+            //Reduce Accumulator
+            let numbers3=[10,20,30,40]              //acc           num
+            let acc=0;                              //0             10
+            for(let num of numbers3)                //10            20
+            {                                       //30            30
+                acc+=num                            //60            40
+            }                                       //100          
+            console.log(acc)  
+            
+           let sum= numbers3.reduce(
+                (acc,num)=>{
+                    return num+acc
+                }
+            )
+
+            console.log(sum)
+
+
     </script>
 </body>
 </html>

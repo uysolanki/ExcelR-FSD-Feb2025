@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const products=[{
+            pno:1,
+            title: 'Cotton T-Shirt',
+            price:1000,
+            quantity:25,
+            category:'Womens',
+            rating:{
+                count:100,
+                stars:3.7
+            }},
+            {
+            pno:2,
+            title: 'Jeans',
+            price:2000,
+            quantity:10,
+            category:'Mens',
+            rating:{
+                count:50,
+                stars:3.7
+            }},
+            {
+            pno:3,
+            title: 'Formal Shirt',
+            price:500,
+            quantity:20,
+            category:'Kids',
+            rating:{
+                count:150,
+                stars:3.7
+            }},
+            {
+            pno:4,
+            title: 'Saree',
+            price:2000,
+            quantity:10,
+            category:'Womens',
+            rating:{
+                count:200,
+                stars:3.7
+            }},
+            {
+            pno:5,
+            title: 'Tie',
+            price:100,
+            quantity:100,
+            category:'Mens',
+            rating:{
+                count:100,
+                stars:3.7
+            }}]
+
+            //total quantity
+            let totalRatings=products.reduce(
+                (acc,product)=> acc+product.rating.count,0 
+            )
+            console.log(totalRatings)
+
+
+            let totalWorth=products.reduce(
+                (acc,product)=> acc+product.quantity * product.price,0 
+            )
+            console.log(totalWorth)
+
+            //display all women products
+            // const womenProds=products.filter(
+            //     (product)=>{
+            //                 return product.category==='Womens'
+            //     }
+            // )
+            //console.log(womenProds)
+
+            //display totalWorth of women products
+            const totalwomenProds1=products.filter(
+                (product)=>{
+                            return product.category==='Mens'
+                }
+            ).reduce(
+                (acc,prod)=>{
+                    return acc+prod.price*prod.quantity
+                },0
+            )
+            console.log('Total Women Prods ', totalwomenProds1)
+
+            //console.log(totWorthOfwomenProds)
+    </script>
+</body>
+</html>
