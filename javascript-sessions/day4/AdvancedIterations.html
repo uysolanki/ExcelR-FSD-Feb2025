@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const cars=["Audi","BMW","Mercedes","Mahindra"]
+         for(let i=0;i<cars.length;i++)
+         {
+            console.log('I like ',cars[i])
+                if(i==1)
+                break;
+         }
+
+         for(let car of cars)
+         {
+            console.log('I drive ',car)
+            if(car==='Mercedes')
+            break;
+         }
+
+         cars.forEach(
+            (car)=>{
+                if(car==='Mercedes')
+                return                                  //continue
+                console.log('I own ',car)
+            }
+         )
+        //forEach
+        //Map
+        //Filter
+        //Find
+        //Reduce
+
+        //  let numbers=[10,20,30,40]      //doubleNumbers=20,40,60,80
+        //  let doubleArr=[];
+        //  numbers.forEach(
+        //     (num)=>{
+        //         let d=num+num    
+        //         doubleArr.push(d)
+        //     }
+        //  )
+        //  console.log(numbers)
+        //  console.log(doubleArr)
+
+        // let numbers=[5,6,7,8,9];
+        // let sqrArr=[]
+        // numbers.forEach(
+        //     (num)=>{
+        //         sqrArr.push(num*num)
+        //     }
+        // ) 
+
+        // console.log(sqrArr)
+
+        // let numbers=[15,6,3,8,9];
+        // let sqrArr= numbers.map(
+        //     (num)=>{
+        //            return num*num;
+        //     })
+
+        //     console.log(sqrArr)
+
+
+            let numbers=[8,3,9,8,9];
+            let sqrArr= numbers.map(num=>num*num)
+            console.log(sqrArr)
+
+
+            const products=[{
+            pno:1,
+            title: 'Cotton T-Shirt',
+            price:100,
+            quantity:50,
+            category:'Womens',
+            rating:{
+                count:500,
+                stars:3.7
+            }},
+            {
+            pno:2,
+            title: 'Jeans',
+            price:100,
+            quantity:50,
+            category:'Mens',
+            rating:{
+                count:500,
+                stars:3.7
+            }},
+            {
+            pno:3,
+            title: 'Formal Shirt',
+            price:100,
+            quantity:50,
+            category:'Kids',
+            rating:{
+                count:500,
+                stars:3.7
+            }},
+            {
+            pno:4,
+            title: 'Saree',
+            price:100,
+            quantity:50,
+            category:'Womens',
+            rating:{
+                count:500,
+                stars:3.7
+            }},
+            {
+            pno:5,
+            title: 'Tie',
+            price:100,
+            quantity:50,
+            category:'Mens',
+            rating:{
+                count:500,
+                stars:3.7
+            }}]
+            //titleArr=[Cotton T-Shirt,Jeans,Formal Shirt]
+            const titleArray=products.map(
+                (prod)=>{
+                    return prod.title
+                }
+            )
+            console.log(titleArray)
+
+            const categoryArray=products.map(
+                (prod)=>{
+                    return prod.category
+                }
+            )
+            console.log(categoryArray)
+            let uniqueCategories=new Set(categoryArray)
+            console.log(uniqueCategories)
+
+            let allCategories=[...uniqueCategories,'All']
+            console.log(allCategories)
+
+
+           const ac=[...new Set(products.map(product=>product.category)),'All']
+           console.log(ac)
+    </script>
+</body>
+</html>
