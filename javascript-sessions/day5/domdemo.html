@@ -15,9 +15,9 @@
     </style>
 </head>
 <body>
-    <h1 id="fb-h1">Welcome to facebook</h1>
-    <h1 id="am-h1">Welcome to Amazon</h1>
-    <h1 id="my-h1">Welcome to Myntra</h1>
+    <h1 id="fb-h1" class="parent-h1">Welcome to facebook</h1>
+    <h1 id="am-h1" class="parent-h1">Welcome to Amazon</h1>
+    <h1 id="my-h1" class="parent-h1">Welcome to Myntra</h1>
     <p id="shop-para" onmouseenter="toggleParaText()">your One Stop Shopping Destination</p>
     <div id="firstdiv">
         <h1>Welcome to ExcelR</h1>
@@ -25,6 +25,10 @@
             <h1>Welcome to FSD</h1>
         </div>
     </div>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="password" id="password" placeholder="Enter your password">
+    <input id="search" placeholder="Search">
 
     <script>
        
@@ -47,10 +51,6 @@
         amazonHeading.style.backgroundColor='lightpink'
         amazonHeading.style.color='Blue'
 
-      
-       
-       
-
        function toggleParaText()
         {
             let paraElement=document.querySelector('#shop-para')
@@ -58,6 +58,33 @@
             paraElement.innerHTML="Shop Here"
         }
 
+        const parentHeadingEle=document.getElementsByClassName('parent-h1')
+        const parentHeadingEle1=document.querySelectorAll('.parent-h1')
+        console.log(parentHeadingEle)
+        console.log(parentHeadingEle1)
+
+        Array.from(parentHeadingEle).forEach(
+            (heading,index)=>{
+                    if(index%2==1)
+                    heading.innerHTML="Test"
+            }
+        )
+
+        const firstDivHeadings=document.querySelectorAll('#firstdiv>h1');
+        Array.from(firstDivHeadings).forEach(
+            (element)=>
+            {
+                element.style.backgroundColor="black"
+                element.style.color="Pink"
+            }
+        )
+
+        const inputElelemts=document.querySelectorAll('input[type=text]')
+        Array.from(inputElelemts).forEach(
+            (ele)=>{
+                console.log(ele.id)
+            }
+        )
 
     </script>
 </body>
