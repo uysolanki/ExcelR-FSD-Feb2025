@@ -79,7 +79,7 @@
             //console.log(womenProds)
 
             //display totalWorth of women products
-            const totalwomenProds1=products.filter(
+            const totalmenProds1=products.filter(
                 (product)=>{
                             return product.category==='Mens'
                 }
@@ -88,7 +88,7 @@
                     return acc+prod.price*prod.quantity
                 },0
             )
-            console.log('Total Women Prods ', totalwomenProds1)
+            console.log('Total Men Prods ', totalwomenProds1)
 
             //console.log(totWorthOfwomenProds)
     </script>

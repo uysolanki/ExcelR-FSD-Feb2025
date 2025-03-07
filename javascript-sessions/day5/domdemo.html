@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shopping-para{
+            background-color: aqua;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 28px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="fb-h1">Welcome to facebook</h1>
+    <h1 id="am-h1">Welcome to Amazon</h1>
+    <h1 id="my-h1">Welcome to Myntra</h1>
+    <p id="shop-para" onmouseenter="toggleParaText()">your One Stop Shopping Destination</p>
+    <div id="firstdiv">
+        <h1>Welcome to ExcelR</h1>
+        <div id="seconddiv">
+            <h1>Welcome to FSD</h1>
+        </div>
+    </div>
+
+    <script>
+       
+        const h1Elements=document.getElementsByTagName('h1')
+        console.log(h1Elements)
+        // h1Elements[0].innerHTML="Apple"
+        // h1Elements[1].innerHTML="Mango"
+
+        for(let i=0;i<h1Elements.length;i++)
+        {
+            if(i%2==0)
+            h1Elements[i].style.backgroundColor="yellow"
+            else
+            h1Elements[i].style.backgroundColor="red"
+        }
+
+        const amazonHeading=document.getElementById('am-h1')
+        amazonHeading.innerHTML='Amazon India'
+        amazonHeading.style.fontFamily='Arial'
+        amazonHeading.style.backgroundColor='lightpink'
+        amazonHeading.style.color='Blue'
+
+      
+       
+       
+
+       function toggleParaText()
+        {
+            let paraElement=document.querySelector('#shop-para')
+            paraElement.classList.add('shopping-para')
+            paraElement.innerHTML="Shop Here"
+        }
+
+
+    </script>
+</body>
+</html>
